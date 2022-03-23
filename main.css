@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+
+  background: #383838;
+}
+
+.memory-game {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.memory-game__title {
+  margin: 20px 0;
+
+  font-size: 45px;
+  font-family: 'OpenSans', 'Tahoma', sans-serif;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.memory-game__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 640px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.memory-game__card {
+  position: relative;
+
+  width: 24.9%;
+  height: 32.9%;
+
+  background: #527eef;
+
+  cursor: pointer;
+
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s, opacity 0.2s ease-out, visibility 0.2s ease-out;
+}
+
+.memory-game__card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.memory-game__card.flip {
+  transform: rotateY(180deg);
+}
+
+.memory-game__card.hide {
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+}
+
+.memory-game__front {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  object-fit: contain;
+  backface-visibility: hidden;
+}
+
+.memory-game__front {
+  background: #fbff36;
+
+  transform: rotateY(180deg);
+}
+
+.memory-game__img {
+  width: 35%;
+  user-select: none;
+}
