@@ -10,16 +10,17 @@ body {
   width: 100vw;
   height: 100vh;
 
-  background: #383838;
+  background: #69a5ac;
 }
 
 .memory-game {
-  width: 1140px;
+  max-width: 1400px;
+  width: 90%;
   margin: 0 auto;
 }
 
 .memory-game__title {
-  margin: 20px 0;
+  margin: 20px 0 35px;
 
   font-size: 45px;
   font-family: 'OpenSans', 'Tahoma', sans-serif;
@@ -33,7 +34,6 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  height: 640px;
   margin: 0 auto;
   perspective: 1000px;
 }
@@ -41,10 +41,12 @@ body {
 .memory-game__card {
   position: relative;
 
-  width: 24.9%;
-  height: 32.9%;
+  width: 24.5%;
+  height: 150px;
+  margin-bottom: 10px;
 
-  background: #527eef;
+  background: #0c575b;
+  border-radius: 5px;
 
   cursor: pointer;
 
@@ -77,13 +79,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2%;
 
   object-fit: contain;
   backface-visibility: hidden;
-}
-
-.memory-game__front {
-  background: #fbff36;
+  background: #c5dfe6;
 
   transform: rotateY(180deg);
 }
